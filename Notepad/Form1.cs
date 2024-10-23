@@ -10,11 +10,26 @@ using System.Windows.Forms;
 
 namespace Notepad
 {
-    public partial class Form1 : Form
+    public partial class formulario : Form
     {
-        public Form1()
+        public formulario()
         {
             InitializeComponent();
+        }
+
+        private void abrirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
