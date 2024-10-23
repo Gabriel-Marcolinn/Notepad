@@ -12,6 +12,8 @@ namespace Notepad
 {
     public partial class formulario : Form
     {
+
+        public bool alterado;
         public formulario()
         {
             InitializeComponent();
@@ -19,7 +21,7 @@ namespace Notepad
 
         private void abrirToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            openFileAbrir.ShowDialog();
         }
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
@@ -28,6 +30,11 @@ namespace Notepad
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+            alterado = true;
+        }
+
+        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
 
         }
