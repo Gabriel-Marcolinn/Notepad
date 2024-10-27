@@ -215,6 +215,7 @@
             // corpoBloco
             // 
             this.corpoBloco.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.corpoBloco.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.corpoBloco.Location = new System.Drawing.Point(0, 24);
             this.corpoBloco.Name = "corpoBloco";
             this.corpoBloco.Size = new System.Drawing.Size(800, 404);
@@ -225,6 +226,7 @@
             // openFileAbrir
             // 
             this.openFileAbrir.Filter = "Arquivos de texto|*.txt";
+            this.openFileAbrir.InitialDirectory = "C:";
             this.openFileAbrir.Title = "Abrir Arquivo";
             this.openFileAbrir.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
             // 
