@@ -32,7 +32,7 @@ namespace Notepad
             else
             {
                 //mensagem que mostra que foi alteado, com um botão de prosseguir ou cancelar o processo, e um ícone de questionmark
-                if(MessageBox.Show("O arquivo atual foi alterado.\nDeseja Salvar?", "Bloco de Notas", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if(MessageBox.Show("O arquivo atual foi alterado.\nDeseja Salvar?", "Bloco de Notas", MessageBoxButtons.YesNo, MessageBoxIcon.Question)==DialogResult.Yes)
                 {
                     if(this.Text != "")
                     {
@@ -45,13 +45,9 @@ namespace Notepad
                     }
                     
                 }
-                else
-                {
-                    abrirArquivo();
-                }
+                abrirArquivo();
             }
         }
-
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
@@ -65,12 +61,15 @@ namespace Notepad
 
         private void sairToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
 
         private void copiarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
+            if(corpoBloco.SelectedText != "")
+            {
+                corpoBloco.Copy();
+            }
         }
 
         private void salvarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -89,6 +88,63 @@ namespace Notepad
         private void salvarComoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             salvarComo();
+        }
+
+        private void desfazerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            corpoBloco.Undo();
+        }
+
+        private void recortarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (corpoBloco.SelectedText != "")
+            {
+                corpoBloco.Cut();
+            }
+        }
+
+        private void colarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Clipboard.ContainsText())
+            {
+                corpoBloco.Paste();
+            }
+        }
+
+        private void formulario_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (alterado)
+            {
+                DialogResult result = MessageBox.Show("O arquivo atual foi alterado.\nDeseja Salvar?", "Bloco de Notas", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    if (this.Text != "")
+                    {
+                        //significa que já existe um arquivo aberto
+                        salvarArquivo(this.Text);
+                    }
+                    else
+                    {
+                        salvarComo();
+                    }
+                }
+                else if (result == DialogResult.Cancel)
+                {
+                    e.Cancel = true;
+                }
+            }
+        }
+
+        private void selecionarTudoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (corpoBloco.Text != "")
+            {
+                corpoBloco.SelectAll();
+            }
+            else
+            {
+                MessageBox.Show("Não há nada para ser selecionado...", "Selecionar tudo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         /*

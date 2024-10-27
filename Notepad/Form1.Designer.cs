@@ -142,6 +142,7 @@
             this.desfazerToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Z)));
             this.desfazerToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.desfazerToolStripMenuItem.Text = "Desfazer";
+            this.desfazerToolStripMenuItem.Click += new System.EventHandler(this.desfazerToolStripMenuItem_Click);
             // 
             // recortarToolStripMenuItem
             // 
@@ -149,6 +150,7 @@
             this.recortarToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
             this.recortarToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.recortarToolStripMenuItem.Text = "Recortar";
+            this.recortarToolStripMenuItem.Click += new System.EventHandler(this.recortarToolStripMenuItem_Click);
             // 
             // copiarToolStripMenuItem
             // 
@@ -164,6 +166,7 @@
             this.colarToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
             this.colarToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.colarToolStripMenuItem.Text = "Colar";
+            this.colarToolStripMenuItem.Click += new System.EventHandler(this.colarToolStripMenuItem_Click);
             // 
             // selecionarTudoToolStripMenuItem
             // 
@@ -171,6 +174,7 @@
             this.selecionarTudoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
             this.selecionarTudoToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.selecionarTudoToolStripMenuItem.Text = "Selecionar Tudo";
+            this.selecionarTudoToolStripMenuItem.Click += new System.EventHandler(this.selecionarTudoToolStripMenuItem_Click);
             // 
             // formatarToolStripMenuItem
             // 
@@ -218,7 +222,7 @@
             // corpoBloco
             // 
             this.corpoBloco.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.corpoBloco.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.corpoBloco.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.corpoBloco.Location = new System.Drawing.Point(0, 24);
             this.corpoBloco.Name = "corpoBloco";
             this.corpoBloco.Size = new System.Drawing.Size(800, 404);
@@ -250,6 +254,7 @@
             this.MainMenuStrip = this.stripHeader;
             this.Name = "formulario";
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.formulario_FormClosing);
             this.stripHeader.ResumeLayout(false);
             this.stripHeader.PerformLayout();
             this.ResumeLayout(false);
