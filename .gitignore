@@ -18,6 +18,7 @@ obj/
 .vs/
 .idea/
 
+
 # Auto-generated files
 *.csproj.user
 *.csproj.vspscc

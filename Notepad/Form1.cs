@@ -41,7 +41,7 @@ namespace Notepad
 
         private void copiarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            corpoBloco
+           
         }
     }
 }
