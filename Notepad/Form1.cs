@@ -180,6 +180,22 @@ namespace Notepad
             alterado = false;
         }
 
+        private void quebraDeLinhaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (quebraDeLinhaToolStripMenuItem.CheckState == CheckState.Checked)
+            {
+                //desmarca a caixa e tira o wordwrap
+                quebraDeLinhaToolStripMenuItem.CheckState = CheckState.Unchecked;
+                corpoBloco.WordWrap = false;
+            }
+            else
+            {
+                quebraDeLinhaToolStripMenuItem.CheckState = CheckState.Checked;
+                corpoBloco.WordWrap = true;
+            }
+        }
+
+
         /*
          * Funções próprias
          */

@@ -191,8 +191,9 @@
             // quebraDeLinhaToolStripMenuItem
             // 
             this.quebraDeLinhaToolStripMenuItem.Name = "quebraDeLinhaToolStripMenuItem";
-            this.quebraDeLinhaToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.quebraDeLinhaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.quebraDeLinhaToolStripMenuItem.Text = "Quebra de Linha";
+            this.quebraDeLinhaToolStripMenuItem.Click += new System.EventHandler(this.quebraDeLinhaToolStripMenuItem_Click);
             // 
             // fonteToolStripMenuItem
             // 
