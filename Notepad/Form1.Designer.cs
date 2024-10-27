@@ -50,6 +50,7 @@
             this.stripFooter = new System.Windows.Forms.StatusStrip();
             this.corpoBloco = new System.Windows.Forms.RichTextBox();
             this.openFileAbrir = new System.Windows.Forms.OpenFileDialog();
+            this.salvarDialog = new System.Windows.Forms.SaveFileDialog();
             this.stripHeader.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -225,10 +226,15 @@
             // 
             // openFileAbrir
             // 
-            this.openFileAbrir.Filter = "Arquivos de texto|*.txt";
+            this.openFileAbrir.Filter = "Arquivos de texto(*.txt)|*.txt|Documentos de Texto (*.rtf)|*.rtf";
             this.openFileAbrir.InitialDirectory = "C:";
             this.openFileAbrir.Title = "Abrir Arquivo";
             this.openFileAbrir.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
+            // 
+            // salvarDialog
+            // 
+            this.salvarDialog.Filter = "Arquivos de texto(*.txt)|*.txt|Documentos de Texto (*.rtf)|*.rtf";
+            this.salvarDialog.Title = "Salvar Como";
             // 
             // formulario
             // 
@@ -273,6 +279,7 @@
         private System.Windows.Forms.ToolStripMenuItem sobreToolStripMenuItem;
         private System.Windows.Forms.RichTextBox corpoBloco;
         private System.Windows.Forms.OpenFileDialog openFileAbrir;
+        private System.Windows.Forms.SaveFileDialog salvarDialog;
     }
 }
 
