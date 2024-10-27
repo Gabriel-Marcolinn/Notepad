@@ -51,6 +51,7 @@
             this.corpoBloco = new System.Windows.Forms.RichTextBox();
             this.openFileAbrir = new System.Windows.Forms.OpenFileDialog();
             this.salvarDialog = new System.Windows.Forms.SaveFileDialog();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.stripHeader.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -86,6 +87,7 @@
             this.novoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
             this.novoToolStripMenuItem.Size = new System.Drawing.Size(222, 22);
             this.novoToolStripMenuItem.Text = "Novo";
+            this.novoToolStripMenuItem.Click += new System.EventHandler(this.novoToolStripMenuItem_Click);
             // 
             // abrirToolStripMenuItem
             // 
@@ -128,6 +130,7 @@
             // 
             this.editarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.desfazerToolStripMenuItem,
+            this.toolStripMenuItem1,
             this.recortarToolStripMenuItem,
             this.copiarToolStripMenuItem,
             this.colarToolStripMenuItem,
@@ -242,6 +245,14 @@
             this.salvarDialog.Filter = "Arquivos de texto(*.txt)|*.txt|Documentos de Texto (*.rtf)|*.rtf";
             this.salvarDialog.Title = "Salvar Como";
             // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Y)));
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(200, 22);
+            this.toolStripMenuItem1.Text = "Refazer";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            // 
             // formulario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -287,6 +298,7 @@
         private System.Windows.Forms.RichTextBox corpoBloco;
         private System.Windows.Forms.OpenFileDialog openFileAbrir;
         private System.Windows.Forms.SaveFileDialog salvarDialog;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
     }
 }
 

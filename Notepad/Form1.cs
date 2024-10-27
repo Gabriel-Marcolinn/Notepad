@@ -28,13 +28,13 @@ namespace Notepad
             if (!alterado)
             {
                 abrirArquivo();
-            } 
+            }
             else
             {
                 //mensagem que mostra que foi alteado, com um botão de prosseguir ou cancelar o processo, e um ícone de questionmark
-                if(MessageBox.Show("O arquivo atual foi alterado.\nDeseja Salvar?", "Bloco de Notas", MessageBoxButtons.YesNo, MessageBoxIcon.Question)==DialogResult.Yes)
+                if (MessageBox.Show("O arquivo atual foi alterado.\nDeseja Salvar?", "Bloco de Notas", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    if(this.Text != "")
+                    if (this.Text != "")
                     {
                         //significa que já existe um arquivo aberto
                         salvarArquivo(this.Text);
@@ -43,7 +43,7 @@ namespace Notepad
                     {
                         salvarComo();
                     }
-                    
+
                 }
                 abrirArquivo();
             }
@@ -66,7 +66,7 @@ namespace Notepad
 
         private void copiarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if(corpoBloco.SelectedText != "")
+            if (corpoBloco.SelectedText != "")
             {
                 corpoBloco.Copy();
             }
@@ -93,6 +93,11 @@ namespace Notepad
         private void desfazerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             corpoBloco.Undo();
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            corpoBloco.Redo();
         }
 
         private void recortarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -145,6 +150,34 @@ namespace Notepad
             {
                 MessageBox.Show("Não há nada para ser selecionado...", "Selecionar tudo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void novoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (alterado)
+            {
+                DialogResult resultado = MessageBox.Show("O arquivo atual foi alterado.\nDeseja Salvar?", "Bloco de Notas", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+                if (resultado == DialogResult.Yes)
+                {
+                    if (this.Text != "")
+                    {
+                        //significa que já existe um arquivo aberto
+                        salvarArquivo(this.Text);
+                    }
+                    else
+                    {
+                        salvarComo();
+                    }
+                }
+                else if (resultado == DialogResult.Cancel)
+                {
+                    return;
+                }
+            }
+
+            corpoBloco.Clear();
+            this.Text = "";
+            alterado = false;
         }
 
         /*
