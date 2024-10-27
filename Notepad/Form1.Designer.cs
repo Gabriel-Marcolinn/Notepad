@@ -101,6 +101,7 @@
             this.salvarToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
             this.salvarToolStripMenuItem.Size = new System.Drawing.Size(222, 22);
             this.salvarToolStripMenuItem.Text = "Salvar";
+            this.salvarToolStripMenuItem.Click += new System.EventHandler(this.salvarToolStripMenuItem_Click);
             // 
             // salvarComoToolStripMenuItem
             // 
@@ -109,6 +110,7 @@
             | System.Windows.Forms.Keys.S)));
             this.salvarComoToolStripMenuItem.Size = new System.Drawing.Size(222, 22);
             this.salvarComoToolStripMenuItem.Text = "Salvar Como...";
+            this.salvarComoToolStripMenuItem.Click += new System.EventHandler(this.salvarComoToolStripMenuItem_Click);
             // 
             // sairToolStripMenuItem
             // 
