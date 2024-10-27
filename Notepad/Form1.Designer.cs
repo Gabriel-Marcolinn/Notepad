@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.stripHeader = new System.Windows.Forms.MenuStrip();
-            this.stripFooter = new System.Windows.Forms.StatusStrip();
             this.arquivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.novoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.abrirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,6 +47,7 @@
             this.fonteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.stripFooter = new System.Windows.Forms.StatusStrip();
             this.corpoBloco = new System.Windows.Forms.RichTextBox();
             this.openFileAbrir = new System.Windows.Forms.OpenFileDialog();
             this.stripHeader.SuspendLayout();
@@ -65,14 +65,6 @@
             this.stripHeader.Size = new System.Drawing.Size(800, 24);
             this.stripHeader.TabIndex = 0;
             this.stripHeader.Text = "menuStrip1";
-            // 
-            // stripFooter
-            // 
-            this.stripFooter.Location = new System.Drawing.Point(0, 428);
-            this.stripFooter.Name = "stripFooter";
-            this.stripFooter.Size = new System.Drawing.Size(800, 22);
-            this.stripFooter.TabIndex = 1;
-            this.stripFooter.Text = "statusStrip1";
             // 
             // arquivoToolStripMenuItem
             // 
@@ -121,13 +113,13 @@
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
             this.sairToolStripMenuItem.Size = new System.Drawing.Size(219, 6);
-            this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
             // sairToolStripMenuItem1
             // 
             this.sairToolStripMenuItem1.Name = "sairToolStripMenuItem1";
             this.sairToolStripMenuItem1.Size = new System.Drawing.Size(222, 22);
             this.sairToolStripMenuItem1.Text = "Sair";
+            this.sairToolStripMenuItem1.Click += new System.EventHandler(this.sairToolStripMenuItem1_Click);
             // 
             // editarToolStripMenuItem
             // 
@@ -161,6 +153,7 @@
             this.copiarToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
             this.copiarToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.copiarToolStripMenuItem.Text = "Copiar";
+            this.copiarToolStripMenuItem.Click += new System.EventHandler(this.copiarToolStripMenuItem_Click);
             // 
             // colarToolStripMenuItem
             // 
@@ -188,13 +181,13 @@
             // quebraDeLinhaToolStripMenuItem
             // 
             this.quebraDeLinhaToolStripMenuItem.Name = "quebraDeLinhaToolStripMenuItem";
-            this.quebraDeLinhaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.quebraDeLinhaToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.quebraDeLinhaToolStripMenuItem.Text = "Quebra de Linha";
             // 
             // fonteToolStripMenuItem
             // 
             this.fonteToolStripMenuItem.Name = "fonteToolStripMenuItem";
-            this.fonteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.fonteToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.fonteToolStripMenuItem.Text = "Fonte";
             // 
             // ajudaToolStripMenuItem
@@ -208,8 +201,16 @@
             // sobreToolStripMenuItem
             // 
             this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
-            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
             this.sobreToolStripMenuItem.Text = "Sobre";
+            // 
+            // stripFooter
+            // 
+            this.stripFooter.Location = new System.Drawing.Point(0, 428);
+            this.stripFooter.Name = "stripFooter";
+            this.stripFooter.Size = new System.Drawing.Size(800, 22);
+            this.stripFooter.TabIndex = 1;
+            this.stripFooter.Text = "statusStrip1";
             // 
             // corpoBloco
             // 

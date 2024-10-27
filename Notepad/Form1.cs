@@ -24,11 +24,6 @@ namespace Notepad
             openFileAbrir.ShowDialog();
         }
 
-        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
             alterado = true;
@@ -37,6 +32,16 @@ namespace Notepad
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
 
+        }
+
+        private void sairToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void copiarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            corpoBloco
         }
     }
 }
