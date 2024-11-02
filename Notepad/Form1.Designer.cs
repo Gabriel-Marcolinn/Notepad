@@ -38,6 +38,7 @@
             this.sairToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.editarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.desfazerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.recortarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.copiarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.colarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,7 +52,7 @@
             this.corpoBloco = new System.Windows.Forms.RichTextBox();
             this.openFileAbrir = new System.Windows.Forms.OpenFileDialog();
             this.salvarDialog = new System.Windows.Forms.SaveFileDialog();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.dialogFonte = new System.Windows.Forms.FontDialog();
             this.stripHeader.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -147,6 +148,14 @@
             this.desfazerToolStripMenuItem.Text = "Desfazer";
             this.desfazerToolStripMenuItem.Click += new System.EventHandler(this.desfazerToolStripMenuItem_Click);
             // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Y)));
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(200, 22);
+            this.toolStripMenuItem1.Text = "Refazer";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            // 
             // recortarToolStripMenuItem
             // 
             this.recortarToolStripMenuItem.Name = "recortarToolStripMenuItem";
@@ -198,8 +207,9 @@
             // fonteToolStripMenuItem
             // 
             this.fonteToolStripMenuItem.Name = "fonteToolStripMenuItem";
-            this.fonteToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.fonteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.fonteToolStripMenuItem.Text = "Fonte";
+            this.fonteToolStripMenuItem.Click += new System.EventHandler(this.fonteToolStripMenuItem_Click);
             // 
             // ajudaToolStripMenuItem
             // 
@@ -246,13 +256,9 @@
             this.salvarDialog.Filter = "Arquivos de texto(*.txt)|*.txt|Documentos de Texto (*.rtf)|*.rtf";
             this.salvarDialog.Title = "Salvar Como";
             // 
-            // toolStripMenuItem1
+            // dialogFonte
             // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Y)));
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(200, 22);
-            this.toolStripMenuItem1.Text = "Refazer";
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            this.dialogFonte.Font = new System.Drawing.Font("Consolas", 12F);
             // 
             // formulario
             // 
@@ -300,6 +306,7 @@
         private System.Windows.Forms.OpenFileDialog openFileAbrir;
         private System.Windows.Forms.SaveFileDialog salvarDialog;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.FontDialog dialogFonte;
     }
 }
 

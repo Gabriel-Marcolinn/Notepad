@@ -195,6 +195,17 @@ namespace Notepad
             }
         }
 
+        private void fonteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (dialogFonte.ShowDialog() == DialogResult.OK)
+            {
+                if (corpoBloco.SelectionLength == 0)
+                {
+                    corpoBloco.SelectAll();
+                }
+                corpoBloco.SelectionFont = dialogFonte.Font;
+            }
+        }
 
         /*
          * Funções próprias
