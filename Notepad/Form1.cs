@@ -20,6 +20,9 @@ namespace Notepad
             InitializeComponent();
             //garante que não traga nada já escrito ao abrir o bloco de notas
             this.Text = "";
+
+            barraDeStatusToolStripMenuItem1.Checked = true;
+            this.atualizaPosicao();
         }
 
         private void abrirToolStripMenuItem_Click(object sender, EventArgs e)
@@ -52,6 +55,7 @@ namespace Notepad
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
             alterado = true;
+            atualizaPosicao();
         }
 
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
@@ -207,6 +211,20 @@ namespace Notepad
             }
         }
 
+        private void barraDeStatusToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            if (barraDeStatusToolStripMenuItem1.Checked == true)
+            {
+                stripFooter.Hide();
+                barraDeStatusToolStripMenuItem1.Checked = false;
+            }
+            else
+            {
+                stripFooter.Show();
+                barraDeStatusToolStripMenuItem1.Checked = true;
+            }
+        }
+
         /*
          * Funções próprias
          */
@@ -253,5 +271,11 @@ namespace Notepad
             }
         }
 
+        private void atualizaPosicao()
+        {
+            int linha = corpoBloco.GetLineFromCharIndex(corpoBloco.SelectionStart)+1;
+            int coluna = corpoBloco.SelectionStart - corpoBloco.GetFirstCharIndexOfCurrentLine();
+            TSLabelPosicao.Text = $"Ln: {linha.ToString()}, Col: {coluna.ToString()}";
+        }
     }
 }

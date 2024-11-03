@@ -46,14 +46,19 @@
             this.formatarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quebraDeLinhaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fonteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exibirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.barraDeStatusToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.ajudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stripFooter = new System.Windows.Forms.StatusStrip();
+            this.TSLabelPosicao = new System.Windows.Forms.ToolStripStatusLabel();
+            this.TSLabelCodificacao = new System.Windows.Forms.ToolStripStatusLabel();
             this.corpoBloco = new System.Windows.Forms.RichTextBox();
             this.openFileAbrir = new System.Windows.Forms.OpenFileDialog();
             this.salvarDialog = new System.Windows.Forms.SaveFileDialog();
             this.dialogFonte = new System.Windows.Forms.FontDialog();
             this.stripHeader.SuspendLayout();
+            this.stripFooter.SuspendLayout();
             this.SuspendLayout();
             // 
             // stripHeader
@@ -62,6 +67,7 @@
             this.arquivoToolStripMenuItem,
             this.editarToolStripMenuItem,
             this.formatarToolStripMenuItem,
+            this.exibirToolStripMenuItem,
             this.ajudaToolStripMenuItem});
             this.stripHeader.Location = new System.Drawing.Point(0, 0);
             this.stripHeader.Name = "stripHeader";
@@ -200,16 +206,31 @@
             // quebraDeLinhaToolStripMenuItem
             // 
             this.quebraDeLinhaToolStripMenuItem.Name = "quebraDeLinhaToolStripMenuItem";
-            this.quebraDeLinhaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.quebraDeLinhaToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.quebraDeLinhaToolStripMenuItem.Text = "Quebra de Linha";
             this.quebraDeLinhaToolStripMenuItem.Click += new System.EventHandler(this.quebraDeLinhaToolStripMenuItem_Click);
             // 
             // fonteToolStripMenuItem
             // 
             this.fonteToolStripMenuItem.Name = "fonteToolStripMenuItem";
-            this.fonteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.fonteToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.fonteToolStripMenuItem.Text = "Fonte";
             this.fonteToolStripMenuItem.Click += new System.EventHandler(this.fonteToolStripMenuItem_Click);
+            // 
+            // exibirToolStripMenuItem
+            // 
+            this.exibirToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.barraDeStatusToolStripMenuItem1});
+            this.exibirToolStripMenuItem.Name = "exibirToolStripMenuItem";
+            this.exibirToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.exibirToolStripMenuItem.Text = "Exibir";
+            // 
+            // barraDeStatusToolStripMenuItem1
+            // 
+            this.barraDeStatusToolStripMenuItem1.Name = "barraDeStatusToolStripMenuItem1";
+            this.barraDeStatusToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.barraDeStatusToolStripMenuItem1.Text = "Barra de Status";
+            this.barraDeStatusToolStripMenuItem1.Click += new System.EventHandler(this.barraDeStatusToolStripMenuItem1_Click);
             // 
             // ajudaToolStripMenuItem
             // 
@@ -227,11 +248,29 @@
             // 
             // stripFooter
             // 
+            this.stripFooter.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TSLabelCodificacao,
+            this.TSLabelPosicao});
             this.stripFooter.Location = new System.Drawing.Point(0, 428);
             this.stripFooter.Name = "stripFooter";
+            this.stripFooter.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.stripFooter.Size = new System.Drawing.Size(800, 22);
             this.stripFooter.TabIndex = 1;
             this.stripFooter.Text = "statusStrip1";
+            // 
+            // TSLabelPosicao
+            // 
+            this.TSLabelPosicao.Name = "TSLabelPosicao";
+            this.TSLabelPosicao.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.TSLabelPosicao.Size = new System.Drawing.Size(53, 17);
+            this.TSLabelPosicao.Text = "Ln: , Col:";
+            // 
+            // TSLabelCodificacao
+            // 
+            this.TSLabelCodificacao.Name = "TSLabelCodificacao";
+            this.TSLabelCodificacao.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.TSLabelCodificacao.Size = new System.Drawing.Size(38, 17);
+            this.TSLabelCodificacao.Text = "UTF-8";
             // 
             // corpoBloco
             // 
@@ -275,6 +314,8 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.formulario_FormClosing);
             this.stripHeader.ResumeLayout(false);
             this.stripHeader.PerformLayout();
+            this.stripFooter.ResumeLayout(false);
+            this.stripFooter.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -307,6 +348,10 @@
         private System.Windows.Forms.SaveFileDialog salvarDialog;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.FontDialog dialogFonte;
+        private System.Windows.Forms.ToolStripStatusLabel TSLabelCodificacao;
+        private System.Windows.Forms.ToolStripStatusLabel TSLabelPosicao;
+        private System.Windows.Forms.ToolStripMenuItem exibirToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem barraDeStatusToolStripMenuItem1;
     }
 }
 
