@@ -52,15 +52,15 @@ namespace Notepad
             }
         }
 
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        private void corpoBloco_TextChanged(object sender, EventArgs e)
         {
             alterado = true;
             atualizaPosicao();
         }
 
-        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+        private void corpoBloco_SelectionChanged(object sender, EventArgs e)
         {
-
+            atualizaPosicao();
         }
 
         private void sairToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -225,9 +225,9 @@ namespace Notepad
             }
         }
 
-        /*
-         * Funções próprias
-         */
+        
+         //Funções próprias
+         
         private void abrirArquivo()
         {
             //Valida se foi selecionado OK, ao abrir a tela de seleção do arquivo
@@ -274,7 +274,7 @@ namespace Notepad
         private void atualizaPosicao()
         {
             int linha = corpoBloco.GetLineFromCharIndex(corpoBloco.SelectionStart)+1;
-            int coluna = corpoBloco.SelectionStart - corpoBloco.GetFirstCharIndexOfCurrentLine();
+            int coluna = corpoBloco.SelectionStart - corpoBloco.GetFirstCharIndexOfCurrentLine()+1;
             TSLabelPosicao.Text = $"Ln: {linha.ToString()}, Col: {coluna.ToString()}";
         }
     }

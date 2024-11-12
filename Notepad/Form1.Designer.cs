@@ -51,8 +51,8 @@
             this.ajudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stripFooter = new System.Windows.Forms.StatusStrip();
-            this.TSLabelPosicao = new System.Windows.Forms.ToolStripStatusLabel();
             this.TSLabelCodificacao = new System.Windows.Forms.ToolStripStatusLabel();
+            this.TSLabelPosicao = new System.Windows.Forms.ToolStripStatusLabel();
             this.corpoBloco = new System.Windows.Forms.RichTextBox();
             this.openFileAbrir = new System.Windows.Forms.OpenFileDialog();
             this.salvarDialog = new System.Windows.Forms.SaveFileDialog();
@@ -258,19 +258,19 @@
             this.stripFooter.TabIndex = 1;
             this.stripFooter.Text = "statusStrip1";
             // 
-            // TSLabelPosicao
-            // 
-            this.TSLabelPosicao.Name = "TSLabelPosicao";
-            this.TSLabelPosicao.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.TSLabelPosicao.Size = new System.Drawing.Size(53, 17);
-            this.TSLabelPosicao.Text = "Ln: , Col:";
-            // 
             // TSLabelCodificacao
             // 
             this.TSLabelCodificacao.Name = "TSLabelCodificacao";
             this.TSLabelCodificacao.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.TSLabelCodificacao.Size = new System.Drawing.Size(38, 17);
             this.TSLabelCodificacao.Text = "UTF-8";
+            // 
+            // TSLabelPosicao
+            // 
+            this.TSLabelPosicao.Name = "TSLabelPosicao";
+            this.TSLabelPosicao.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.TSLabelPosicao.Size = new System.Drawing.Size(53, 17);
+            this.TSLabelPosicao.Text = "Ln: , Col:";
             // 
             // corpoBloco
             // 
@@ -281,14 +281,14 @@
             this.corpoBloco.Size = new System.Drawing.Size(800, 404);
             this.corpoBloco.TabIndex = 2;
             this.corpoBloco.Text = "";
-            this.corpoBloco.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
+            this.corpoBloco.SelectionChanged += new System.EventHandler(this.corpoBloco_SelectionChanged);
+            this.corpoBloco.TextChanged += new System.EventHandler(this.corpoBloco_TextChanged);
             // 
             // openFileAbrir
             // 
             this.openFileAbrir.Filter = "Arquivos de texto(*.txt)|*.txt|Documentos de Texto (*.rtf)|*.rtf";
             this.openFileAbrir.InitialDirectory = "C:";
             this.openFileAbrir.Title = "Abrir Arquivo";
-            this.openFileAbrir.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
             // 
             // salvarDialog
             // 
