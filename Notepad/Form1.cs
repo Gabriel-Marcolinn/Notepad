@@ -277,5 +277,11 @@ namespace Notepad
             int coluna = corpoBloco.SelectionStart - corpoBloco.GetFirstCharIndexOfCurrentLine()+1;
             TSLabelPosicao.Text = $"Ln: {linha.ToString()}, Col: {coluna.ToString()}";
         }
+
+        private void sobreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormSobre sobre = new FormSobre();
+            sobre.ShowDialog();
+        }
     }
 }
